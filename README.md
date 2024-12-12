@@ -1,7 +1,6 @@
 # XiYan-DateResolver
 为了解决通用大模型在时间感知方面所面临的挑战，我们开发了一套解析处理文本（主要支持中文）中的时间和日期信息的流程XiYan-DateResolver，并将其转换为准确的真实时间。在覆盖的时间范围内实现了超过95%的准确率，支持包括年、月、日、周、季度、半年及时间段等在内的100多种时间表达方式。
 
-Case：
 
 （假设今天为2024年12月6日，星期五）
 
@@ -86,6 +85,6 @@ DateTimeUtil.run(list_output)
 
 ## 适用范围
 
-XiYan-DateResolver支持一百多种常用的标准时间表达式，主要支持中文，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)。
+XiYan-DateResolver支持一百多种常用的时间表达式，主要支持中文，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)。
 
 
