@@ -19,7 +19,7 @@ XiYan-DateResolver包含以下两个步骤：
 
 模型文件：基于`Qwen2-7B-Instruct`模型微调的checkpoint，用于从输入的文本中抽取时间表达式，并将其转化成本方案定义的标准格式。
 
-模型文件下载地址：[modelscope](https://www.modelscope.cn/models/XGenerationLab/DateResolver-Qwen2-7B-Instruct)
+模型地址：[modelscope](https://www.modelscope.cn/models/XGenerationLab/DateResolver-Qwen2-7B-Instruct)
 
 示例：
 
@@ -34,7 +34,7 @@ XiYan-DateResolver包含以下两个步骤：
 
 ### 2、时间表达式推理
 
-日期后处理脚本`date.py`，自动获取当前日期，把标准的时间表达式转换成真实的时间。
+日期后处理脚本`date.py`，自动获取当前日期，完成从标准的时间表达式到真实时间的推理。
 
 示例：（假设今天为2024年12月6日，星期五）
 
@@ -100,9 +100,9 @@ list_output = ast.literal_eval(response)
 DateTimeUtil.run(list_output)
 ```
 
-
 ## 适用范围
 
-XiYan-DateResolver支持一百多种常用的时间表达式，主要支持中文，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)
++ 语言：中文为主
++ 时间表达式：一百多种常用的时间表达式，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)
 
 
