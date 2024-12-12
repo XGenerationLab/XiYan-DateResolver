@@ -20,7 +20,7 @@
 
 XiYan-DateResolver包含以下两个步骤：
 
-1、时间表达式抽取
+### 1、时间表达式抽取
 
 模型文件：基于`Qwen2-7B-Instruct`模型微调的checkpoint，用于从输入的文本中抽取时间表达式，并将其转化成本方案定义的标准格式。
 
@@ -39,9 +39,9 @@ XiYan-DateResolver包含以下两个步骤：
 ```
 
 
-2、时间表达式推理
+### 2、时间表达式推理
 
-日期后处理脚本 "date.py"，用于将模型输出的日期转化为真实时间。
+日期后处理脚本`date.py`，自动获取当前日期，把标准的时间表达式转换成真实的时间。
 
 示例：（假设今天为2024年12月6日，星期五）
 
@@ -59,7 +59,7 @@ XiYan-DateResolver包含以下两个步骤：
 
 
 ## 使用方式
-1、时间表达式抽取
+### 1、时间表达式抽取
 
 首先从modelscope加载模型：
 ```python
@@ -104,7 +104,7 @@ response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 list_output = ast.literal_eval(response)
 ```
 
-2、时间表达式推理
+### 2、时间表达式推理
 ```python
 DateTimeUtil.run(list_output)
 ```
