@@ -17,7 +17,7 @@ XiYan-DateResolver包含以下两个步骤：
 
 ### 1、时间表达式抽取
 
-模型文件：基于`Qwen2-7B-Instruct`模型微调的checkpoint，用于从输入的文本中抽取时间表达式，并将其转化成本方案定义的标准格式。
+模型文件：基于`Qwen2-7B-Instruct`微调的checkpoint，用于从输入的文本中抽取时间表达式，并将其转化成本方案定义的标准格式。
 
 模型地址：[modelscope](https://www.modelscope.cn/models/XGenerationLab/DateResolver-Qwen2-7B-Instruct)
 
@@ -59,12 +59,13 @@ import ast
 from date import DateTimeUtil
 device = "cuda"
 
+model_name = "XGenerationLab/DateResolver-Qwen2-7B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(
-    "XGenerationLab/DateResolver-Qwen2-7B-Instruct",
+    model_name,
     torch_dtype="auto",
     device_map="auto"
 )
-tokenizer = AutoTokenizer.from_pretrained("XGenerationLab/DateResolver-Qwen2-7B-Instruct")
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 ```
 
 LLM从输入的文本中解析出时间表达式：
