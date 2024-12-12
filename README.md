@@ -86,6 +86,6 @@ DateTimeUtil.run(list_output)
 
 ## 适用范围
 
-XiYan-DateResolver支持一百多种常用的标准时间表达式，主要支持中文，详细的时间表达式列表及对应的计算逻辑情在[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)查看。
+XiYan-DateResolver支持一百多种常用的标准时间表达式，主要支持中文，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)。
 
 
