@@ -1,36 +1,4 @@
 ---
-frameworks:
-- Pytorch
-license: Apache License 2.0
-tasks:
-- nli
-
-#model-type:
-##如 gpt、phi、llama、chatglm、baichuan 等
-#- gpt
-
-#domain:
-##如 nlp、cv、audio、multi-modal
-#- nlp
-
-#language:
-##语言代码列表 https://help.aliyun.com/document_detail/215387.html?spm=a2c4g.11186623.0.0.9f8d7467kni6Aa
-#- cn
-
-#metrics:
-##如 CIDEr、Blue、ROUGE 等
-#- CIDEr
-
-#tags:
-##各种自定义，包括 pretrained、fine-tuned、instruction-tuned、RL-tuned 等训练方法和其他
-#- pretrained
-
-#tools:
-##如 vllm、fastchat、llamacpp、AdaSeq 等
-#- vllm
-base_model:
-  - Qwen/Qwen2-7B-Instruct
----
 # 日期推理介绍
 为了解决通用大模型在时间感知方面所面临的挑战，我们开发了一套解析处理文本中的时间和日期信息的流程，并将其转换为准确的真实时间。在覆盖的时间范围内实现了超过95%的准确率，支持包括年月日、周、季度、半年及时间段等在内的100多种时间表达方式。
 
