@@ -50,7 +50,9 @@ XiYan-DateResolver包含以下两个步骤：
 
 ## Requirements
 -- python>=3.9
+
 -- transformers>4.37.0
+
 -- modelscope>=1.17.0
 
 ## 使用方式
