@@ -7,10 +7,10 @@
 （假设今天为2024年12月6日，星期五）
 
 输入：上周三的销量是多少？
-输出：上周三=2024年11月27日。
+输出：上周星期3=2024年11月27日。
 
 输入：公司在不包含今天的近三天内处理的订单数有多少？
-输出：不包含今天的近三天=2024年12月3日至2024年12月5日。
+输出：不包含今天的近3天=2024年12月3日至2024年12月5日。
 ```
 
 ## 流程介绍
@@ -36,7 +36,7 @@ XiYan-DateResolver包含以下两个步骤：
 
 ### 2、时间表达式推理
 
-日期后处理脚本`date.py`，自动获取当前日期，完成从标准的时间表达式到真实时间的推理。
+日期后处理脚本`date_convert.py`，自动获取当前日期，完成从标准的时间表达式到真实时间的推理。
 
 示例：（假设今天为2024年12月6日，星期五）
 
@@ -49,7 +49,9 @@ XiYan-DateResolver包含以下两个步骤：
 ```
 
 ## Requirements
-
+-- python>=3.9
+-- transformers>4.37.0
+-- modelscope>=1.17.0
 
 ## 使用方式
 ### 1、时间表达式抽取
@@ -57,8 +59,6 @@ XiYan-DateResolver包含以下两个步骤：
 首先从modelscope加载模型：
 ```python
 from modelscope import AutoModelForCausalLM, AutoTokenizer
-import ast
-from date import DateTimeUtil
 device = "cuda"
 
 model_name = "XGenerationLab/DateResolver-Qwen2-7B-Instruct"
@@ -94,11 +94,12 @@ generated_ids = [
 ]
 
 response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-list_output = ast.literal_eval(response)
+list_output = eval(response)
 ```
 
 ### 2、时间表达式推理
 ```python
+from date_convert import DateTimeUtil
 DateTimeUtil.run(list_output)
 ```
 
