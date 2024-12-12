@@ -38,8 +38,8 @@ XiYan-DateResolver包含以下两个步骤：
 
 示例：（假设今天为2024年12月6日，星期五）
 
-```text
-输入：['今年']
+```json
+输入：["今年"]
 输出：'今年=2024年'
 
 输入：["上周星期5", "上周星期3"]
@@ -68,10 +68,9 @@ tokenizer = AutoTokenizer.from_pretrained("XGenerationLab/DateResolver-Qwen2-7B-
 ```
 
 LLM从输入的文本中解析出时间表达式：
-
 ```python
 question = "上周三和上周五的销量是多少？"
-prompt = "给你一个用户的问题，请你提取出该用户所提问的时间，结果以list格式输出。\n\n【用户问题】{question}\n\n\n【回答】\n".format(question=question)
+prompt = "给你一个用户的问题，请你提取出该用户所提问的时间，结果以list格式输出。\n\n【用户问题】\n{question}\n\n【回答】\n".format(question=question)
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": prompt}
