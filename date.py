@@ -55,7 +55,7 @@ class DateTimeUtil:
     HALF_YEAR_PATTERN = re.compile(r'(上|下)半年')
 
     @staticmethod
-    def build_date_time_comment(expressions: List[str]) -> str:
+    def build_date_time_comment(expressions: List[str]) -> list:
         now = datetime.now()
         year = now.year
         month = now.month
@@ -65,7 +65,7 @@ class DateTimeUtil:
 
         date_time_comment_list = DateTimeUtil.build_date_expressions(expressions, now)
         final_expression = [today_comment, "需要计算的时间是："] + date_time_comment_list
-        return "\n".join(final_expression)
+        return date_time_comment_list
 
     @staticmethod
     def build_date_expressions(expressions: List[str], now: date) -> List[str]:
@@ -971,7 +971,7 @@ class DateTimeUtil:
 
     @staticmethod
     def run(date_list):
-        print(DateTimeUtil.build_date_time_comment(date_list))
+        return DateTimeUtil.build_date_time_comment(date_list)
 
 
 if __name__ == "__main__":
