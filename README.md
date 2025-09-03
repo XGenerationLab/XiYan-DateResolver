@@ -107,5 +107,19 @@ DateTimeUtil.run(list_output)
 + 时间表达式：一百多种常用的时间表达式，完整的时间表达式列表及对应的计算逻辑请查看：[时间表达式](https://github.com/XGenerationLab/XiYan-DateResolver/blob/main/%E6%97%B6%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F.xlsx)
 
 
+## 联系我们:
+
+如果您对我们的研究或产品感兴趣，请随时联系我们。
+
+#### Contact Information:
+
+刘义富, zhencang.lyf@alibaba-inc.com
+
+#### Join Our DingTalk Group
+
+<a href="https://github.com/XGenerationLab/XiYan-SQL/blob/main/xiyansql_dingding.png">Ding Group钉钉群</a> 
+
+
+
 
 更多XiYan-SQL相关内容请访问：https://github.com/XGenerationLab/XiYan-SQL
